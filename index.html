@@ -1,21 +1,15 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+  <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-	<meta name="monetization" content="$ilp.uphold.com/frU6BJBrQAWx">
 
-	{{#if css}}
-	<style>
-		{{{ css }}}
-	</style>
-	{{else}}
-	<link rel="stylesheet" href="main.css">
-	{{/if}}
-</head>
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/main.css">
+  </head>
 
-<body>
+  <body style="display: none;">
 	<div id="game">
 		<div id="gui" class="block">
 			<div id="goldBlock">
@@ -90,14 +84,7 @@
 			<div class="block">
 				<h1>Morality</h1>
 				<p>Sorry! About to overflow the size limit!</p>
-				<p>I'm working on new and more unique Units, Skills, Mechanics, and so much MORE!</p>
-				<p>Enjoyed the game so far?</p>
-				<ul>
-					<li>Join my <a href="https://discord.gg/zGnXGtY" target="_blank">Discord</a></li>
-					<li><a href="https://martintale.com/about-me#message-me?ref=soul-not-found" target="_blank">Message Me</a> directly</li>
-					<li>or <a href="https://ko-fi.com/martintale?ref=soul-not-found" target="_blank">Buy me a Coffee</a>!</li>
-				</ul>
-				<p class="hide-mobile">Thanks for playing, <br><a href="https://martintale.com?ref=soul-not-found" target="_blank">Martin Tale</a></p>
+				<p class="hide-mobile">Thanks for playing, <br> Original creator: Martin Tale</p>
 			</div>
 		</div>
 		<div class="content" id="trophies">
@@ -134,13 +121,8 @@
 			<button id="popupButton">OK</button>
 		</div>
 	</div>
-	{{#if js}}
-	<script>
-		{{{ js }}}
-	</script>
-	{{else}}
-	<script src='main.js'></script>
-	{{/if}}
+
+	<script src='./js/main.js' type="module"></script>
 </body>
 
 </html>

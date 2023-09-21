@@ -1,14 +1,8 @@
-const monetization = document.monetization;
 const addEvent = (e, t, f) => {
 	e.addEventListener(t, f);
 };
 
-let isPremium = false;
-if (monetization) {
-	addEvent(monetization, 'monetizationstart', () => {
-		isPremium = true;
-	});
-}
+let isPremium = true;
 
 const click = 'click';
 const afterbegin = 'afterbegin';
@@ -1874,12 +1868,7 @@ const switchTheme = (changeState, event = null) => {
 
 	if (gameState[33] != true) {
 		if (event != null) {
-			if (confirm('This is premium game theme! Do you want to be redirected to coil.com to get a membership?')) {
-				const win = open('https://coil.com/?ref=soul-not-found', '_blank');
-				win.focus();
-			} else {
-				event.preventDefault();
-			}
+			event.preventDefault();
 		}
 		return;
 	}
@@ -2068,12 +2057,6 @@ const setup = () => {
 	gameState[2] = Date.now();
 
 	if (gameState[33] == false) {
-		if (monetization) {
-			addEvent(monetization, 'monetizationstart', () => {
-				unlockThemes();
-			});
-		}
-
 		if (isPremium) {
 			unlockThemes();
 		}
