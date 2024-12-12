@@ -1,3 +1,6 @@
+import "./normalize.css";
+import "./main.css";
+
 const addEvent = (e, t, f) => {
   e.addEventListener(t, f);
 };
